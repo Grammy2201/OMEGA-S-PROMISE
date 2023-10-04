@@ -1,8 +1,0 @@
-{
-  "dependencies": {
-    "stripe": "^13.8.0"
-  },
-  "devDependencies": {
-    "nodemon": "^3.0.1"
-  }
-}
