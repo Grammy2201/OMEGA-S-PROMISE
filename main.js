@@ -1,11 +1,56 @@
-function checkout() {
-  // Create a Stripe payment intent
-  const stripe = Stripe('YOUR_API_KEY');
-  const paymentIntent = stripe.paymentIntents.create({
-    amount: 1000,
-    currency: 'usd',
-  });
+document.addEventListener('DOMContentLoaded', function() {
+  const element = document.querySelector('#my-element');
 
-  // Redirect the user to the Stripe checkout page
-  window.location.href = paymentIntent.client_secret;
-}
+  element.addEventListener('checkout', function() {
+    
+  });
+});
+
+const form = document.querySelector('form');
+
+
+form.addEventListener('checkout', function(event) {
+  
+  event.preventDefault();
+
+  
+  const email = document.querySelector('#inputEmail4').value;
+  const amount = document.querySelector('#amount').value;
+
+  if (!email || !amount) {
+    
+    alert('Please enter a valid email address and amount.');
+    return;
+  }
+
+  form.submit();
+});
+
+const loadingIndicator = document.querySelector('#loadingIndicator');
+
+
+form.addEventListener('checkout', function(event) {
+  
+  event.preventDefault();
+
+  
+  loadingIndicator.style.display = 'block';
+
+  
+  form.submit();
+});
+
+form.addEventListener('load', function() {
+  
+  loadingIndicator.style.display = 'none';
+});
+
+form.addEventListener('checkout', function(event) {
+  
+  event.preventDefault();
+
+  form.submit();
+
+  
+  window.location.href = '/thank-you.html';
+});
