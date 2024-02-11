@@ -8,6 +8,6 @@ imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    RouterModule
+    RouterModule,
     
 ];
