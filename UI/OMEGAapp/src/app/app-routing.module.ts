@@ -5,29 +5,35 @@ import { AboutComponent } from './About/about.component';
 import { ContactComponent } from './Contact/contact.component';
 import { DonateComponent } from './Donate/donate.component';
 import { HomeComponent } from './Home/home.component';
+import { StripepaymentComponent } from './stripepayment/stripepayment.component';
 
 const routes: Routes = [
   {
-    path: "",
+    path: 'home',
     component: HomeComponent,
       title: "Home Page"
   },
     {
-      path: "'./Donate/donate.component.html'",
+      path: 'donate',
       component: DonateComponent,
         title: "Donate Page"
     },
 
     {
-      path: "contact",
+      path: 'contact',
       component: ContactComponent,
         title: "Contact Page"
     },
 
     {
-      path: "about",
+      path: 'about',
       component: AboutComponent,
         title: "About Page"
+    },
+
+    {
+      path: 'stripepayment',
+      component: StripepaymentComponent
     },
 
 ];
